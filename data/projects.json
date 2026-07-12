@@ -1,0 +1,92 @@
+[
+  {
+    "id": "001",
+    "title": "Momenty",
+    "description": "NIFTY 500 momentum strategy — K-Means clustering across 17 features, Fama-French factor betas, efficient-frontier optimization with Kendall Tau covariance. Live on paper trading. The project that led directly to the IndiQuant internship.",
+    "type": "software",
+    "tags": ["Python", "K-Means", "Portfolio Optimization", "pandas"],
+    "github": "https://github.com/PASTE_REPO_LINK",
+    "youtube": ""
+  },
+  {
+    "id": "002",
+    "title": "Options Pricer",
+    "description": "C++ CLI engine pricing options via Black-Scholes and Monte Carlo simulation with Delta output and convergence analysis plotted from generated CSV data.",
+    "type": "software",
+    "tags": ["C++", "Monte Carlo", "Quant Finance"],
+    "github": "https://github.com/PASTE_REPO_LINK",
+    "youtube": ""
+  },
+  {
+    "id": "003",
+    "title": "VQE — H₂ Benchmark",
+    "description": "Variational Quantum Eigensolver benchmarking the ground-state energy of molecular hydrogen, landing within ~1% of the exact Hartree value (−1.1077 vs −1.1175 Hartree).",
+    "type": "software",
+    "tags": ["Quantum Computing", "VQE", "Qiskit"],
+    "github": "https://github.com/PASTE_REPO_LINK",
+    "youtube": ""
+  },
+  {
+    "id": "004",
+    "title": "Kafka Pipeline",
+    "description": "Dockerized Kafka producer/consumer system running in KRaft mode — no Zookeeper dependency. Built on WSL with custom Windows hosts file fix.",
+    "type": "software",
+    "tags": ["Python", "Docker", "Kafka"],
+    "github": "https://github.com/PASTE_REPO_LINK",
+    "youtube": ""
+  },
+  {
+    "id": "005",
+    "title": "dctect",
+    "description": "AI image detector using DCT/frequency domain analysis. PASTE_DESCRIPTION.",
+    "type": "software",
+    "tags": ["Python", "AI / ML"],
+    "github": "https://github.com/PASTE_REPO_LINK",
+    "youtube": ""
+  },
+  {
+    "id": "006",
+    "title": "Image → ASCII",
+    "description": "Converts images into ASCII art via a FastAPI web app, deployed live on Render.",
+    "type": "software",
+    "tags": ["Python", "FastAPI"],
+    "github": "https://github.com/PASTE_REPO_LINK",
+    "youtube": ""
+  },
+  {
+    "id": "007",
+    "title": "Stocky",
+    "description": "Stock tracking app pulling live market data via yFinance, built on Flask with a SQLite backend.",
+    "type": "software",
+    "tags": ["Flask", "SQLite", "yFinance"],
+    "github": "https://github.com/PASTE_REPO_LINK",
+    "youtube": ""
+  },
+  {
+    "id": "008",
+    "title": "Resourcea",
+    "description": "PASTE_DESCRIPTION.",
+    "type": "software",
+    "tags": ["PASTE_TAGS"],
+    "github": "https://github.com/PASTE_REPO_LINK",
+    "youtube": ""
+  },
+  {
+    "id": "009",
+    "title": "Bare-Metal ESP32",
+    "description": "Writing directly to GPIO memory-mapped registers in C using a custom cpinmode/cdigitalwrite abstraction — no Arduino layer, no HAL. Includes hardware timer ISR via gptimer and edge-detected button toggle.",
+    "type": "hardware",
+    "tags": ["C", "ESP32", "Embedded", "ESP-IDF"],
+    "github": "https://github.com/PASTE_REPO_LINK",
+    "youtube": ""
+  },
+  {
+    "id": "010",
+    "title": "Mini OS",
+    "description": "From-scratch OS in C — syscall dispatcher and a CPU scheduler simulating FCFS and Round Robin with Gantt chart verification. In progress.",
+    "type": "software",
+    "tags": ["C", "Operating Systems"],
+    "github": "https://github.com/PASTE_REPO_LINK",
+    "youtube": ""
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "title": "LeetCode Knight",
+    "description": "Rating 1967, top 3% globally. Targeting 2000+.",
+    "date": "ONGOING",
+    "type": "achievement"
+  },
+  {
+    "title": "NCRC — 2nd Nationally",
+    "description": "National level robotics competition conducted by SP Robotics.",
+    "date": "2024",
+    "type": "achievement"
+  },
+  {
+    "title": "TIFA World Record",
+    "description": "Largest robot-made microforest — held at Anna University.",
+    "date": "2024",
+    "type": "achievement"
+  },
+  {
+    "title": "CS50x",
+    "description": "Harvard's Introduction to Computer Science — completed with distinction.",
+    "date": "COMPLETED",
+    "type": "certification"
+  }
+]
