@@ -156,8 +156,8 @@ section{ position:relative; padding:110px 24px; }
 .photo-circle{
   width:110px; height:110px;
   border-radius:50%;
-  padding:3px;
-  background:linear-gradient(135deg,rgba(74,217,227,0.6),rgba(227,197,103,0.6));
+  padding:2px;
+  background:var(--line-strong);
   flex-shrink:0;
 }
 .photo-circle-inner{
@@ -415,7 +415,45 @@ section{ position:relative; padding:110px 24px; }
   flex-shrink:0;
 }
 .ach-badge.cert{ border-color:rgba(74,217,227,0.4); color:var(--cyan); }
+.ach-row.clickable{ cursor:pointer; }
+.ach-row.clickable:hover .ach-left h4{ color:var(--cyan); }
+.ach-row.clickable:hover{ background:rgba(255,255,255,0.02); border-radius:6px; }
 @media(max-width:560px){ .ach-row{ flex-direction:column; gap:8px; } }
+
+/* lightbox */
+.lightbox-backdrop{
+  display:none;
+  position:fixed; inset:0; z-index:200;
+  background:rgba(0,0,0,0.88);
+  backdrop-filter:blur(6px);
+  align-items:center; justify-content:center;
+}
+.lightbox-backdrop.open{ display:flex; }
+.lightbox-inner{
+  position:relative;
+  max-width:90vw; max-height:88vh;
+}
+.lightbox-inner img{
+  max-width:100%; max-height:88vh;
+  border-radius:10px;
+  border:1px solid var(--line-strong);
+  object-fit:contain;
+  display:block;
+}
+.lightbox-close{
+  position:absolute;
+  top:-14px; right:-14px;
+  width:32px; height:32px;
+  border-radius:50%;
+  background:var(--surface-solid);
+  border:1px solid var(--line-strong);
+  color:var(--text-dim);
+  font-size:1.1rem;
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer;
+  transition:color 0.15s ease;
+}
+.lightbox-close:hover{ color:var(--text); }
 
 /* ============================================================
    CONTACT
@@ -432,7 +470,9 @@ section{ position:relative; padding:110px 24px; }
 }
 .contact-email:hover{ color:var(--cyan); border-color:var(--cyan); }
 .contact-inner .icon-row{ justify-content:center; margin-top:28px; }
-
+.accent-green {
+    color: #22C55E; /* Emerald 500 */
+}
 /* ============================================================
    FOOTER
 ============================================================ */
@@ -467,78 +507,50 @@ footer{
   <p class="hero-handle">@kauboi007</p>
 
   <div class="hero-top-row">
-    <h1 class="hero-name">Kaushik</h1>
+    <h1 class="hero-name">Kaushik M</h1>
     <div class="photo-circle">
       <div class="photo-circle-inner">
         <span class="photo-fallback">K</span>
         <!-- Replace the src below with your photo URL -->
-        <img src="PASTE_PHOTO_URL_HERE" alt="Kaushik" onerror="this.style.display='none'">
+        <img src="images\WhatsApp Image 2024-06-23 at 9.31.22 PM.jpeg" alt="Kaushik" onerror="this.style.display='none'">
       </div>
     </div>
   </div>
 
-  <p class="hero-meta">B.Tech CSE · VIT Chennai · 2025–2029</p>
+  <p class="hero-meta">B.Tech CSE · VIT Chennai · Sophomore Year</p>
 
   <p class="hero-tagline">
-    Building at the intersection of <span class="accent-cyan">markets</span>,
-    <span class="accent-yellow">machines</span>, and code.
+    Excited when it comes to <span class="accent-cyan">quantum computing</span>,
+    <span class="accent-yellow">machines</span>, and <span class="accent-green">finance</span>.
   </p>
   <p class="hero-sub">
-    First-year CS student shipping momentum trading strategies, bare-metal firmware,
-    and the systems that sit in between. Junior Quant Dev Intern at IndiQuant.
+    Quantum computing enthusiast, builds stuff that are at the intersection of math, physics & CS and chill dude to hang out with :)
   </p>
 
   <div class="hero-actions">
-    <a href="#projects" class="btn-primary">View Projects</a>
+    <a href="#projects" class="btn-ghost">View Projects</a>
     <!-- Put your resume PDF in the root folder as resume.pdf -->
     <a href="resume.pdf" download class="btn-ghost">
-      <img src="https://cdn.simpleicons.org/files/9a9aa2" style="width:14px;height:14px;" alt=""> Resume ↓
+       My Resume 
     </a>
     <a href="#contact" class="btn-ghost">Contact</a>
   </div>
 
   <div class="hero-socials">
     <div class="icon-row">
-      <a href="https://github.com/PASTE_USERNAME" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub">
+      <a href="https://github.com/kauboi007" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub">
         <img src="https://cdn.simpleicons.org/github/eaeaec" alt="GitHub">
       </a>
-      <a href="https://linkedin.com/in/PASTE_HANDLE" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <img src="https://cdn.simpleicons.org/linkedin/eaeaec" alt="LinkedIn">
+      <a href="https://linkedin.com/in/kauboi007" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <!-- Upload your own LinkedIn logo and paste the URL below -->
+        <img src="images\linkedin.png" alt="LinkedIn" style="width:18px;height:18px;" onerror="this.style.opacity='0'">
       </a>
-      <a href="https://instagram.com/PASTE_HANDLE" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram">
+      <a href="https://instagram.com/kauboi007" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram">
         <img src="https://cdn.simpleicons.org/instagram/eaeaec" alt="Instagram">
       </a>
-      <a href="https://leetcode.com/PASTE_HANDLE" class="social-icon" target="_blank" rel="noopener" aria-label="LeetCode">
+      <a href="https://leetcode.com/kauboi007" class="social-icon" target="_blank" rel="noopener" aria-label="LeetCode">
         <img src="https://cdn.simpleicons.org/leetcode/eaeaec" alt="LeetCode">
       </a>
-    </div>
-  </div>
-
-  <p class="hero-projects-label">FEATURED PROJECTS</p>
-  <div class="hero-quicklinks">
-    <div class="project-hover" tabindex="0">
-      <span class="quick-btn">/01 Momenty</span>
-      <div class="project-popover">
-        <h4>Momenty</h4>
-        <p>NIFTY 500 momentum strategy — K-Means clustering, factor betas, efficient-frontier optimization with Kendall Tau covariance. Live on paper trading. This is what got me the IndiQuant internship.</p>
-        <div><span class="pill">Python</span><span class="pill">K-Means</span><span class="pill">Portfolio Optimization</span></div>
-      </div>
-    </div>
-    <div class="project-hover" tabindex="0">
-      <span class="quick-btn">/02 Options Pricer</span>
-      <div class="project-popover">
-        <h4>Options Pricer</h4>
-        <p>C++ CLI engine pricing options via Black-Scholes and Monte Carlo simulation with Delta output and convergence analysis.</p>
-        <div><span class="pill">C++</span><span class="pill">Monte Carlo</span><span class="pill">Quant Finance</span></div>
-      </div>
-    </div>
-    <div class="project-hover" tabindex="0">
-      <span class="quick-btn">/03 VQE</span>
-      <div class="project-popover">
-        <h4>VQE — H₂ Benchmark</h4>
-        <p>Variational Quantum Eigensolver benchmarking ground-state energy of molecular hydrogen — landed within ~1% of the exact Hartree value.</p>
-        <div><span class="pill">Quantum Computing</span><span class="pill">VQE</span><span class="pill">Qiskit</span></div>
-      </div>
     </div>
   </div>
 
@@ -559,7 +571,7 @@ footer{
   <div class="section-inner reveal">
     <div class="section-head">
       <p class="eyebrow">ABOUT</p>
-      <h2>Who I Am</h2>
+      <h2>Who Am I??</h2>
     </div>
     <!-- Content fetched from data/about.txt -->
     <div class="about-text" id="about-content">
@@ -705,25 +717,33 @@ footer{
   <div class="section-inner contact-inner reveal">
     <p class="eyebrow">CONTACT</p>
     <!-- Replace with your actual email -->
-    <a href="mailto:your.email@example.com" class="contact-email">your.email@example.com</a>
+    <a href="mailto:kaushikmugundan2019@gmail.com" class="contact-email">kaushikmugundan2019@gmail.com</a>
     <div class="icon-row">
-      <a href="https://github.com/PASTE_USERNAME" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub">
+      <a href="https://github.com/kauboi007" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub">
         <img src="https://cdn.simpleicons.org/github/eaeaec" alt="GitHub">
       </a>
-      <a href="https://linkedin.com/in/PASTE_HANDLE" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <img src="https://cdn.simpleicons.org/linkedin/eaeaec" alt="LinkedIn">
+      <a href="https://linkedin.com/in/kauboi007" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="images\linkedin.png" alt="LinkedIn" style="width:18px;height:18px;" onerror="this.style.opacity='0'">
       </a>
-      <a href="https://instagram.com/PASTE_HANDLE" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram">
+      <a href="https://instagram.com/kauboi007" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram">
         <img src="https://cdn.simpleicons.org/instagram/eaeaec" alt="Instagram">
       </a>
-      <a href="https://leetcode.com/PASTE_HANDLE" class="social-icon" target="_blank" rel="noopener" aria-label="LeetCode">
+      <a href="https://leetcode.com/kauboi007" class="social-icon" target="_blank" rel="noopener" aria-label="LeetCode">
         <img src="https://cdn.simpleicons.org/leetcode/eaeaec" alt="LeetCode">
       </a>
     </div>
   </div>
 </section>
 
-<footer>© 2026 KAUSHIK — BUILT FROM SCRATCH, NO TEMPLATE.</footer>
+<!-- lightbox for certificate images -->
+<div class="lightbox-backdrop" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate preview">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+    <img id="lightbox-img" src="" alt="Certificate">
+  </div>
+</div>
+
+<footer>Kauboi007 was here</footer>
 
 </main>
 
@@ -927,6 +947,22 @@ document.querySelectorAll('.toggle-btn').forEach(btn=>{
   });
 });
 
+/* ---- LIGHTBOX ---- */
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=document.getElementById('lightbox-img');
+const lightboxClose=document.getElementById('lightbox-close');
+
+function openLightbox(src){ lightboxImg.src=src; lightbox.classList.add('open'); }
+function closeLightbox(){ lightbox.classList.remove('open'); lightboxImg.src=''; }
+
+lightboxClose.addEventListener('click',closeLightbox);
+lightbox.addEventListener('click',e=>{ if(e.target===lightbox)closeLightbox(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape')closeLightbox(); });
+
+function isImageUrl(url){
+  return /\.(jpg|jpeg|png|gif|webp|svg)(\?.*)?$/i.test(url);
+}
+
 /* ---- ACHIEVEMENTS ---- */
 function badgeClass(item){
   if(item.type==='certification') return 'ach-badge cert';
@@ -941,13 +977,30 @@ fetch('data/achievements.json')
     items.forEach(item=>{
       const row=document.createElement('div');
       row.className='ach-row';
+      const hasLink=item.link&&item.link.trim()!=='';
+      if(hasLink) row.classList.add('clickable');
+
+      // badge: cert rows also show a small external/preview hint
+      const badgeTip=hasLink?(isImageUrl(item.link)?' ↗ view':'  ↗'):'';
+
       row.innerHTML=`
         <div class="ach-left">
           <h4>${item.title}</h4>
           <p>${item.description}</p>
         </div>
-        <span class="${badgeClass(item)}">${item.date}</span>
+        <span class="${badgeClass(item)}">${item.date}${badgeTip}</span>
       `;
+
+      if(hasLink){
+        row.addEventListener('click',()=>{
+          if(isImageUrl(item.link)){
+            openLightbox(item.link);
+          } else {
+            window.open(item.link,'_blank','noopener');
+          }
+        });
+      }
+
       list.appendChild(row);
     });
   })

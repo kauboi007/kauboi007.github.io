@@ -1,26 +1,31 @@
 [
   {
     "title": "LeetCode Knight",
-    "description": "Rating 1967, top 3% globally. Targeting 2000+.",
-    "date": "ONGOING",
-    "type": "achievement"
+    "description": "Rating 1967, top 3% globally.",
+    "date": "",
+    "type": "achievement",
+    "link": "leetcode.com/kauboi007"
   },
   {
     "title": "NCRC — 2nd Nationally",
     "description": "National level robotics competition conducted by SP Robotics.",
-    "date": "2024",
-    "type": "achievement"
+    "date": "2020",
+    "type": "achievement",
+    "link": "images/Screenshot 2026-07-12 194648.png"
   },
   {
     "title": "TIFA World Record",
     "description": "Largest robot-made microforest — held at Anna University.",
-    "date": "2024",
-    "type": "achievement"
+    "date": "2020",
+    "type": "achievement",
+    "link": "images/WhatsApp Image 2025-05-17 at 2.53.25 PM.jpeg"
   },
   {
     "title": "CS50x",
-    "description": "Harvard's Introduction to Computer Science — completed with distinction.",
+    "description": "Harvard's Introduction to Computer Science — completed.",
     "date": "COMPLETED",
-    "type": "certification"
+    "type": "certification",
+    "link": "images/CS50x.png"
   }
+  
 ]

@@ -1,7 +1,8 @@
-I'm a first-year B.Tech CSE student at VIT Chennai, building at the intersection of quantitative finance, low-level systems, and quantum computing.
+I got into the engineering space when I was 7 , I started playing with ICs , transistors and slowly transitioned to software
+development..
 
-I started with electronics at 7 — ICs, transistors, Arduinos — and never really stopped. These days I write C++ for options pricers, Python for momentum strategies running on live paper capital, and bare-metal C for ESP32 firmware with no abstraction layer between me and the hardware.
+Currently, Im interested in quantum computing , I feel its a space that is hiding a lot of secrets and I wish, I discover them one day!
 
-Currently interning as a Junior Quant Developer at IndiQuant, where my NIFTY 500 momentum model Momenty got me in the door. Long term I'm building toward defense-tech — think Palantir/Anduril but India-first and globally scaled.
+Im currently pursuing CS at VIT Chennai..
 
-LeetCode Knight (top 3%), CGPA 9.13, and always working on something that shouldn't be possible for a first-year.
+Academics aside , Im a chill dude who likes to crack jokes 🙃 and I love porsches and fighter jets!
