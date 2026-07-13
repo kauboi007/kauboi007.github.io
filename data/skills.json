@@ -1,0 +1,72 @@
+[
+  {
+    "category": "Quantum Computing",
+    "skills": [
+      { "name": ".NET Q#", "icon": "dotnet" },
+      { "name": "Qiskit", "icon": "qiskit" },
+      { "name": "PySCF" },
+      { "name": "OpenFermion" },
+      { "name": "Fermionic Ops" },
+      { "name": "Molecular Calculations" }
+    ]
+  },
+  {
+    "category": "Embedded Systems & Low Level",
+    "skills": [
+      { "name": "C", "icon": "c" },
+      { "name": "C++", "icon": "cplusplus" },
+      { "name": "Java", "icon": "java" },
+      { "name": "Arduino", "icon": "arduino" },
+      { "name": "Raspberry Pi", "icon": "raspberrypi" }
+    ]
+  },
+  {
+    "category": "AI / ML & Data Science",
+    "skills": [
+      { "name": "Python", "icon": "python" },
+      { "name": "TensorFlow", "icon": "tensorflow" },
+      { "name": "Scikit-learn", "icon": "scikitlearn" },
+      { "name": "NumPy", "icon": "numpy" },
+      { "name": "Pandas", "icon": "pandas" },
+      { "name": "SciPy", "icon": "scipy" },
+      { "name": "Matplotlib", "icon": "matplotlib" }
+    ]
+  },
+  {
+    "category": "Quantitative Finance & Trading",
+    "skills": [
+      { "name": "Statsmodels" },
+      { "name": "Statistical Modeling" },
+      { "name": "yFinance" },
+      { "name": "Market Data" },
+      { "name": "PyPfOpt" },
+      { "name": "Portfolio Optimization" }
+    ]
+  },
+  {
+    "category": "Data Streaming & Infra",
+    "skills": [
+      { "name": "Kafka", "icon": "apachekafka" },
+      { "name": "Docker", "icon": "docker" }
+    ]
+  },
+  {
+    "category": "Web Dev",
+    "skills": [
+      { "name": "HTML5", "icon": "html5" },
+      { "name": "CSS3", "icon": "css3" },
+      { "name": "JavaScript", "icon": "javascript" },
+      { "name": "FastAPI", "icon": "fastapi" },
+      { "name": "Django", "icon": "django" },
+      { "name": "Flask", "icon": "flask" }
+    ]
+  },
+  {
+    "category": "Databases",
+    "skills": [
+      { "name": "MySQL", "icon": "mysql" },
+      { "name": "PostgreSQL", "icon": "postgresql" },
+      { "name": "SQLAlchemy", "icon": "sqlalchemy" }
+    ]
+  }
+]
