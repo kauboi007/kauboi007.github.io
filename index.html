@@ -527,77 +527,8 @@ footer{
       <p class="eyebrow">STACK</p>
       <h2>Skills</h2>
     </div>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <span class="skill-label">QUANTUM COMPUTING</span>
-        <div class="skill-tags">
-          <span class="pill"><img src="https://cdn.simpleicons.org/dotnet/9a9aa2" alt="">.NET Q#</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/qiskit/9a9aa2" alt="">Qiskit</span>
-          <span class="pill">PySCF</span>
-          <span class="pill">OpenFermion</span>
-          <span class="pill">Fermionic Ops</span>
-          <span class="pill">Molecular Calculations</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <span class="skill-label">EMBEDDED SYSTEMS &amp; LOW LEVEL</span>
-        <div class="skill-tags">
-          <span class="pill"><img src="https://cdn.simpleicons.org/c/9a9aa2" alt="">C</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/cplusplus/9a9aa2" alt="">C++</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/java/9a9aa2" alt="">Java</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/arduino/9a9aa2" alt="">Arduino</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/raspberrypi/9a9aa2" alt="">Raspberry Pi</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <span class="skill-label">AI / ML &amp; DATA SCIENCE</span>
-        <div class="skill-tags">
-          <span class="pill"><img src="https://cdn.simpleicons.org/python/9a9aa2" alt="">Python</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/tensorflow/9a9aa2" alt="">TensorFlow</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/scikitlearn/9a9aa2" alt="">Scikit-learn</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/numpy/9a9aa2" alt="">NumPy</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/pandas/9a9aa2" alt="">Pandas</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/scipy/9a9aa2" alt="">SciPy</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/matplotlib/9a9aa2" alt="">Matplotlib</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <span class="skill-label">QUANTITATIVE FINANCE &amp; TRADING</span>
-        <div class="skill-tags">
-          <span class="pill">Statsmodels</span>
-          <span class="pill">Statistical Modeling</span>
-          <span class="pill">yFinance</span>
-          <span class="pill">Market Data</span>
-          <span class="pill">PyPfOpt</span>
-          <span class="pill">Portfolio Optimization</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <span class="skill-label">DATA STREAMING &amp; INFRA</span>
-        <div class="skill-tags">
-          <span class="pill"><img src="https://cdn.simpleicons.org/apachekafka/9a9aa2" alt="">Kafka</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/docker/9a9aa2" alt="">Docker</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <span class="skill-label">WEB DEV</span>
-        <div class="skill-tags">
-          <span class="pill"><img src="https://cdn.simpleicons.org/html5/9a9aa2" alt="">HTML5</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/css3/9a9aa2" alt="">CSS3</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/javascript/9a9aa2" alt="">JavaScript</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/fastapi/9a9aa2" alt="">FastAPI</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/django/9a9aa2" alt="">Django</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/flask/9a9aa2" alt="">Flask</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <span class="skill-label">DATABASES</span>
-        <div class="skill-tags">
-          <span class="pill"><img src="https://cdn.simpleicons.org/mysql/9a9aa2" alt="">MySQL</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/postgresql/9a9aa2" alt="">PostgreSQL</span>
-          <span class="pill"><img src="https://cdn.simpleicons.org/sqlalchemy/9a9aa2" alt="">SQLAlchemy</span>
-        </div>
-      </div>
+    <div class="skills-grid" id="skills-grid">
+      <p style="color:var(--text-faint);font-style:italic;font-size:0.9rem;">Loading stack...</p>
     </div>
   </div>
 </section>
@@ -1012,6 +943,57 @@ fetch('data/achievements.json')
       '<p style="color:var(--text-faint);font-style:italic;">Edit <code>data/achievements.json</code> to add entries.</p>';
   });
 
+
+/* ============================================================
+   SKILLS GENERATOR
+============================================================ */
+fetch('data/skills.json')
+  .then(r => { if(!r.ok) throw new Error(); return r.json(); })
+  .then(groups => {
+    const grid = document.getElementById('skills-grid');
+    grid.innerHTML = '';
+    
+    groups.forEach(group => {
+      // Create group container
+      const groupDiv = document.createElement('div');
+      groupDiv.className = 'skill-group';
+      
+      // Create category header label
+      const label = document.createElement('span');
+      label.className = 'skill-label';
+      label.textContent = group.category.toUpperCase();
+      groupDiv.appendChild(label);
+      
+      // Create tags container
+      const tagsDiv = document.createElement('div');
+      tagsDiv.className = 'skill-tags';
+      
+      // Build dynamic pills
+      group.skills.forEach(skill => {
+        const pill = document.createElement('span');
+        pill.className = 'pill';
+        
+        // Dynamic Logo Injector via simpleicons
+        if (skill.icon && skill.icon.trim() !== '') {
+          const img = document.createElement('img');
+          img.src = `https://cdn.simpleicons.org/${skill.icon}/9a9aa2`;
+          img.alt = '';
+          pill.appendChild(img);
+        }
+        
+        // Append text node
+        pill.appendChild(document.createTextNode(skill.name));
+        tagsDiv.appendChild(pill);
+      });
+      
+      groupDiv.appendChild(tagsDiv);
+      grid.appendChild(groupDiv);
+    });
+  })
+  .catch(() => {
+    document.getElementById('skills-grid').innerHTML =
+      '<p style="color:var(--text-faint);font-style:italic;">Could not load <code>data/skills.json</code>.</p>';
+  });
 /* ============================================================
    SCROLL REVEAL
 ============================================================ */
