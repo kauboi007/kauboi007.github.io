@@ -14,6 +14,7 @@
       { "name": "C", "icon": "c" },
       { "name": "C++", "icon": "cplusplus" },
       { "name": "Java"},
+      { "name": "Rust", "icon": "rust" },
       { "name": "Arduino", "icon": "arduino" },
       { "name": "Raspberry Pi", "icon": "raspberrypi" }
     ]
@@ -34,18 +35,17 @@
     "category": "Quantitative Finance & Trading",
     "skills": [
       { "name": "Statsmodels" },
-      { "name": "Statistical Modeling" },
       { "name": "yFinance" },
-      { "name": "Market Data" },
-      { "name": "PyPfOpt" },
-      { "name": "Portfolio Optimization" }
+      { "name": "PyPfOpt" }
+      
     ]
   },
   {
     "category": "Data Streaming & Infra",
     "skills": [
       { "name": "Kafka", "icon": "apachekafka" },
-      { "name": "Docker", "icon": "docker" }
+      { "name": "Docker", "icon": "docker" },
+      { "name": "Git", "icon": "git" }
     ]
   },
   {
