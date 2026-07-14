@@ -2,100 +2,220 @@
   {
     "id": "001",
     "title": "Momenty",
-    "description": "NIFTY 500 momentum strategy — K-Means clustering across 17 features, Fama-French factor betas, efficient-frontier optimization with Kendall Tau covariance. Live on paper trading. The project that led directly to the IndiQuant internship.",
+    "description": "NIFTY 500 momentum strategy using K-Means clustering across 17 features, Fama French factor betas, efficient frontier optimization with Kendall Tau covariance. this is the project that led directly to the IndiQuant internship.",
     "type": "software",
-    "tags": ["Python", "K-Means", "Portfolio Optimization", "pandas"],
-    "github": "https://github.com/PASTE_REPO_LINK",
-    "youtube": ""
-  },
-  {
-    "id": "003",
-    "title": "VQE — H₂ Benchmark",
-    "description": "Variational Quantum Eigensolver benchmarking the ground-state energy of molecular hydrogen, landing within ~1% of the exact Hartree value (−1.1077 vs −1.1175 Hartree).",
-    "type": "software",
-    "tags": ["Quantum Computing", "VQE", "Qiskit"],
-    "github": "https://github.com/PASTE_REPO_LINK",
-    "youtube": ""
-  },
-  {
-    "id": "003",
-    "title": "Options Pricer",
-    "description": "C++ CLI engine pricing options via Black-Scholes and Monte Carlo simulation with Delta output and convergence analysis plotted from generated CSV data.",
-    "type": "software",
-    "tags": ["C++", "Monte Carlo", "Quant Finance"],
-    "github": "https://github.com/PASTE_REPO_LINK",
+    "tags": [
+      "Python",
+      "K-Means",
+      "Portfolio Optimization",
+      "Pandas",
+      "Numpy"
+    ],
+    "github": "https://github.com/kauboi007/momenty",
     "youtube": ""
   },
   {
     "id": "002",
-    "title": "Options Pricer",
-    "description": "C++ CLI engine pricing options via Black-Scholes and Monte Carlo simulation with Delta output and convergence analysis plotted from generated CSV data.",
+    "title": "Variational Quantum Eigensolver",
+    "description": "Variational Quantum Eigensolver benchmarking the ground-state energy of molecular hydrogen, landing within ~1% of the exact Hartree value (−1.1077 vs −1.1175 Hartree).",
     "type": "software",
-    "tags": ["C++", "Monte Carlo", "Quant Finance"],
-    "github": "https://github.com/PASTE_REPO_LINK",
+    "tags": [
+      "Quantum Computing",
+      "Q#",
+      "Qiskit"
+    ],
+    "github": "https://github.com/kauboi007/VQE",
     "youtube": ""
   },
   {
-    "id": "004",
-    "title": "Kafka Pipeline",
-    "description": "Dockerized Kafka producer/consumer system running in KRaft mode — no Zookeeper dependency. Built on WSL with custom Windows hosts file fix.",
+    "id": "003",
+    "title": "Options Pricer",
+    "description": "C++ CLI engine pricing options via Black-Scholes and Monte Carlo simulation with Delta output and convergence analysis plot.",
     "type": "software",
-    "tags": ["Python", "Docker", "Kafka"],
-    "github": "https://github.com/PASTE_REPO_LINK",
+    "tags": [
+      "C++",
+      "Monte Carlo",
+      "Black scholes",
+      "Quant Finance"
+    ],
+    "github": "https://github.com/kauboi007/optpricer",
     "youtube": ""
   },
   {
     "id": "005",
     "title": "dctect",
-    "description": "AI image detector using DCT/frequency domain analysis. PASTE_DESCRIPTION.",
+    "description": "AI image detector using discrete cosine transform analysis.",
     "type": "software",
-    "tags": ["Python", "AI / ML"],
-    "github": "https://github.com/PASTE_REPO_LINK",
+    "tags": [
+      "Python",
+      "AI",
+      "DSP",
+      "Image processing"
+    ],
+    "github": "https://github.com/kauboi007/dctect",
     "youtube": ""
   },
   {
-    "id": "006",
-    "title": "Image → ASCII",
-    "description": "Converts images into ASCII art via a FastAPI web app, deployed live on Render.",
+    "id": "011",
+    "title": "IVMLPQSE",
+    "description": "Quantum ML Bloch Sphere Simulator: Predict and visualize qubit states using Qiskit and a machine learning model, with interactive simulations and animated Bloch Sphere outputs. ",
     "type": "software",
-    "tags": ["Python", "FastAPI"],
-    "github": "https://github.com/PASTE_REPO_LINK",
+    "tags": [
+      "Quantum Computing",
+      "python",
+      "qiskit"
+    ],
+    "github": "https://github.com/kauboi007/IVMLPQSE",
+    "youtube": ""
+  },
+  {
+    "id": "009",
+    "title": "ReelBloc",
+    "description": "Android app developed in kotlin to make you a less of a doomscroller",
+    "type": "software",
+    "tags": [
+      "kotlin",
+      "android",
+      "utility"
+    ],
+    "github": "https://github.com/kauboi007/ReelBloc",
+    "youtube": ""
+  },
+  {
+    "id": "004",
+    "title": "Kafkar",
+    "description": "A simple dockerized kafka producer/consumer system running in KRaft mode , made to familiarize with kafka and docker",
+    "type": "software",
+    "tags": [
+      "Python",
+      "Docker",
+      "Kafka"
+    ],
+    "github": "https://github.com/kauboi007/kafkar",
     "youtube": ""
   },
   {
     "id": "007",
     "title": "Stocky",
-    "description": "Stock tracking app pulling live market data via yFinance, built on Flask with a SQLite backend.",
+    "description": "Stock tracking app pulling live market data via yFinance, built on Flask with a SQLite backend.Built for my Harvard CS50 final project.",
     "type": "software",
-    "tags": ["Flask", "SQLite", "yFinance"],
-    "github": "https://github.com/PASTE_REPO_LINK",
+    "tags": [
+      "Flask",
+      "SQLite",
+      "yFinance"
+    ],
+    "github": "https://github.com/kauboi007/stocky",
+    "youtube": ""
+  },
+  {
+    "id": "006",
+    "title": "ASCIIart",
+    "description": "Converts images into ASCII art via a FastAPI web app, deployed live on Render.",
+    "type": "software",
+    "tags": [
+      "Python",
+      "FastAPI",
+      "Image processing"
+    ],
+    "github": "https://github.com/kauboi007/asciiart",
     "youtube": ""
   },
   {
     "id": "008",
     "title": "Resourcea",
-    "description": "PASTE_DESCRIPTION.",
+    "description": "Quantum algorithm resource estimator using Q# and Azure QDK.",
     "type": "software",
-    "tags": ["PASTE_TAGS"],
-    "github": "https://github.com/PASTE_REPO_LINK",
-    "youtube": ""
-  },
-  {
-    "id": "009",
-    "title": "Bare-Metal ESP32",
-    "description": "Writing directly to GPIO memory-mapped registers in C using a custom cpinmode/cdigitalwrite abstraction — no Arduino layer, no HAL. Includes hardware timer ISR via gptimer and edge-detected button toggle.",
-    "type": "hardware",
-    "tags": ["C", "ESP32", "Embedded", "ESP-IDF"],
-    "github": "https://github.com/PASTE_REPO_LINK",
+    "tags": [
+      "Quantum Computing",
+      "Q#"
+    ],
+    "github": "https://github.com/kauboi007/Resourca",
     "youtube": ""
   },
   {
     "id": "010",
-    "title": "Mini OS",
-    "description": "From-scratch OS in C — syscall dispatcher and a CPU scheduler simulating FCFS and Round Robin with Gantt chart verification. In progress.",
+    "title": "Matops",
+    "description": "Simple webapp that performs all sorts of matrix calculations",
     "type": "software",
-    "tags": ["C", "Operating Systems"],
-    "github": "https://github.com/PASTE_REPO_LINK",
+    "tags": [
+      "web",
+      "javascript",
+      "utility"
+    ],
+    "github": "https://github.com/kauboi007/Matops",
     "youtube": ""
+  },
+  {
+    "id": "012",
+    "title": "Segra",
+    "description": "A smart bin with reward system developed for my university project.",
+    "type": "hardware",
+    "tags": [
+      "arduino",
+      "ESP32",
+      "python",
+      "django"
+    ],
+    "github": "https://github.com/kauboi007/Segra",
+    "youtube": ""
+  },
+  {
+    "id": "013",
+    "title": "RawBlink",
+    "description": "Blinky using esp32 written directly into the registers with no arduino abstractions using C and espdif",
+    "type": "hardware",
+    "tags": [
+      "C",
+      "Embedded systems"
+    ],
+    "github": "https://github.com/kauboi007/RAWWblink",
+    "youtube": ""
+  },
+  {
+    "id": "014",
+    "title": "Quarantine amigo",
+    "description": " a robot and an an app that keeps you comfortable during a lockdown , won me a national level robotics competition.",
+    "type": "hardware",
+    "tags": [
+      "app",
+      "robotics"
+    ],
+    "github": "",
+    "youtube": "https://youtu.be/8yzi4p1W3fk"
+  },
+  {
+    "id": "015",
+    "title": "Shelterly",
+    "description": "An app I built for Blue Cross of India to help them rescue stray dogs efficiently",
+    "type": "software",
+    "tags": [
+      "app"
+    ],
+    "github": "",
+    "youtube": "https://youtu.be/RSH5DiVNK-0"
+  },
+  {
+    "id": "016",
+    "title": "Homey",
+    "description": "Home assistant like alexa built using raspberry pi and python",
+    "type": "hardware",
+    "tags": [
+      "Python",
+      "raspberry pi",
+      "IoT"
+    ],
+    "github": "",
+    "youtube": "https://youtu.be/uv1a4fyx9RA"
+  },
+  {
+    "id": "017",
+    "title": "FastKart",
+    "description": "An app I built for Marina Mall for improving the shopping experience of the customers , this won me the entry to the national robotics competition",
+    "type": "software",
+    "tags": [
+      "app"
+    ],
+    "github": "",
+    "youtube": "https://youtu.be/jgYlFhw7uP0?si=CTTzijOqjW9Q_6k4"
   }
 ]

@@ -10,20 +10,20 @@
     "title": "NCRC — 2nd Nationally",
     "description": "National level robotics competition conducted by SP Robotics.",
     "date": "2020",
-    "type": "achievement",
+    "type": "certification",
     "link": "images/Screenshot 2026-07-12 194648.png"
   },
   {
     "title": "TIFA World Record",
-    "description": "Largest robot-made microforest — held at Anna University.",
+    "description": "Largest robot made microforest that was held at Anna University.",
     "date": "2020",
-    "type": "achievement",
+    "type": "certification",
     "link": "images/WhatsApp Image 2025-05-17 at 2.53.25 PM.jpeg"
   },
   {
     "title": "CS50x",
-    "description": "Harvard's Introduction to Computer Science — completed.",
-    "date": "COMPLETED",
+    "description": "Harvard's Introduction to Computer Science",
+    "date": "2026",
     "type": "certification",
     "link": "images/CS50x.png"
   }

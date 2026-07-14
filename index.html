@@ -382,6 +382,10 @@ body.dev-mode #dev-badge{ display:flex; }
   color:var(--text-faint); white-space:nowrap; flex-shrink:0;
 }
 .ach-badge.cert{ border-color:rgba(74,217,227,0.4); color:var(--cyan); }
+.ach-badge.achievement{
+  border-color: rgba(227,197,103,0.4);
+  color: var(--yellow);
+}
 .ach-row.clickable{ cursor:pointer; }
 .ach-row.clickable:hover .ach-left h4{ color:var(--cyan); }
 .ach-row.clickable:hover{ background:rgba(255,255,255,0.02); border-radius:6px; }
@@ -440,7 +444,7 @@ footer{
 <!-- To hide it later, change display:block below    -->
 <!-- to display:none — that's the ONLY line to touch -->
 <!-- ============================================= -->
-<button id="dev-mode-toggle-btn" style="display:block">⚙ Toggle Dev Mode</button>
+<button id="dev-mode-toggle-btn" style="display:none">⚙ Toggle Dev Mode</button>
 
 <!-- dev mode badge + panel (invisible until dev mode is toggled) -->
 <div id="dev-badge">
@@ -468,7 +472,7 @@ footer{
       </div>
     </div>
   </div>
-  <p class="hero-meta">B.Tech CSE · VIT Chennai · Sophomore Year</p>
+  <p class="hero-meta">18 · B.Tech CSE @ VIT Chennai · Sophomore</p>
   <p class="hero-tagline">
     Excited when it comes to <span class="accent-cyan">quantum computing</span>,
     <span class="accent-yellow">machines</span>, and <span class="accent-green">finance</span>.
@@ -876,7 +880,6 @@ document.addEventListener('keydown',e=>{
 });
 
 /* export button */
-/* export button */
 document.getElementById('dev-export-btn').addEventListener('click',()=>{
   const panel=document.getElementById('dev-panel');
   panel.classList.toggle('open');
@@ -911,38 +914,52 @@ function isImageUrl(url){return /\.(jpg|jpeg|png|gif|webp|svg)(\?.*)?$/i.test(ur
 /* ============================================================
    ACHIEVEMENTS
 ============================================================ */
-fetch('data/achievements.json')
-  .then(r=>{if(!r.ok)throw new Error();return r.json();})
-  .then(items=>{
-    const list=document.getElementById('ach-list');
-    list.innerHTML='';
-    items.forEach(item=>{
-      const row=document.createElement('div');
-      row.className='ach-row';
-      const isCert=item.type==='certification';
-      const hasLink=item.link&&item.link.trim()!=='';
-      if(hasLink) row.classList.add('clickable');
-      const badgeTip=hasLink?(isImageUrl(item.link)?' ↗':'  ↗'):'';
-      row.innerHTML=`
+fetch('data/ach.json')
+  .then(r => {
+    if (!r.ok) throw new Error();
+    return r.json();
+  })
+  .then(items => {
+    const list = document.getElementById('ach-list');
+    list.innerHTML = '';
+
+    items.forEach(item => {
+      const row = document.createElement('div');
+      row.className = 'ach-row';
+
+      const isCert = item.type === 'certification';
+      const badgeClass = isCert ? 'cert' : 'achievement';
+
+      const hasLink = item.link && item.link.trim() !== '';
+      if (hasLink) row.classList.add('clickable');
+
+      const badgeTip = hasLink ? ' ↗' : '';
+
+      row.innerHTML = `
         <div class="ach-left">
           <h4>${item.title}</h4>
           <p>${item.description}</p>
         </div>
-        <span class="ach-badge${isCert?' cert':''}">${item.date}${badgeTip}</span>
+        <span class="ach-badge ${badgeClass}">
+          ${item.date}${badgeTip}
+        </span>
       `;
-      if(hasLink){
-        row.addEventListener('click',()=>{
-          isImageUrl(item.link)?openLightbox(item.link):window.open(item.link,'_blank','noopener');
+
+      if (hasLink) {
+        row.addEventListener('click', () => {
+          isImageUrl(item.link)
+            ? openLightbox(item.link)
+            : window.open(item.link, '_blank', 'noopener');
         });
       }
+
       list.appendChild(row);
     });
   })
-  .catch(()=>{
-    document.getElementById('ach-list').innerHTML=
-      '<p style="color:var(--text-faint);font-style:italic;">Edit <code>data/achievements.json</code> to add entries.</p>';
+  .catch(() => {
+    document.getElementById('ach-list').innerHTML =
+      '<p style="color:var(--text-faint);font-style:italic;">Edit <code>data/ach.json</code> to add entries.</p>';
   });
-
 
 /* ============================================================
    SKILLS GENERATOR
