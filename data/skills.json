@@ -14,9 +14,9 @@
       { "name": "C", "icon": "c" },
       { "name": "C++", "icon": "cplusplus" },
       { "name": "Java"},
-      { "name": "Rust", "icon": "rust" },
       { "name": "Arduino", "icon": "arduino" },
-      { "name": "Raspberry Pi", "icon": "raspberrypi" }
+      { "name": "Raspberry Pi", "icon": "raspberrypi" },
+      { "name": "Common Lisp", "icon": "commonlisp" }
     ]
   },
   {
